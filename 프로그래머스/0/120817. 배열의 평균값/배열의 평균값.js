@@ -1,10 +1,9 @@
 function solution(numbers) {
-    var answer = 0;
     const len = numbers.length;
 
-    for (var i = 0; i < len; i++) {
-        answer += numbers[i];
-    }
+    let sum = numbers.reduce(function (acc, num) {
+        return acc + num;
+    }, 0);
 
-    return answer / len;
+    return sum / len;
 }
